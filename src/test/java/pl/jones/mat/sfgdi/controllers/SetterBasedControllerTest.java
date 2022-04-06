@@ -2,9 +2,7 @@ package pl.jones.mat.sfgdi.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.jones.mat.sfgdi.services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import pl.jones.mat.sfgdi.services.ConstructorGreetingService;
 
 class SetterBasedControllerTest {
 
@@ -13,7 +11,7 @@ class SetterBasedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterBasedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
