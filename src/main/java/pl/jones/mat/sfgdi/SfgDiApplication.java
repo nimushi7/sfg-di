@@ -3,10 +3,7 @@ package pl.jones.mat.sfgdi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import pl.jones.mat.sfgdi.controllers.ConstructorInjectedController;
-import pl.jones.mat.sfgdi.controllers.MyController;
-import pl.jones.mat.sfgdi.controllers.PropertyInjectedController;
-import pl.jones.mat.sfgdi.controllers.SetterBasedController;
+import pl.jones.mat.sfgdi.controllers.*;
 
 @SpringBootApplication
 public class SfgDiApplication {
@@ -15,6 +12,9 @@ public class SfgDiApplication {
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
         MyController myController = (MyController) ctx.getBean("myController");
+
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
         System.out.println(myController.sayHello());
 
