@@ -1,7 +1,9 @@
 package pl.jones.mat.sfgdi.controllers;
 
+import org.springframework.stereotype.Controller;
 import pl.jones.mat.sfgdi.services.GreetingService;
 
+@Controller
 public class ConstructorInjectedController {
 
     private final GreetingService greetingService;
